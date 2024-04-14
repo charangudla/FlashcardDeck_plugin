@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: Simple Flashcard
- * Plugin URI: http://example.com/simple-flashcard
+ * Plugin Name: Simple Flashcard deck
+ * Plugin URI:
  * Description: A simple plugin to create interactive flash cards with customizable colors and a navigable deck.
  * Version: 1.2
- * Author: Your Name
- * Author URI: http://example.com
+ * Author: Charan Gudla
+ * Author URI: https://charangudla.com
  */
 
 function simple_flashcard_enqueue_scripts() {
