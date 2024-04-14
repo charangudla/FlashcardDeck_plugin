@@ -1,32 +1,31 @@
 .flashcard-deck {
     position: relative;
-    width: 320px; /* Adjust based on the actual size of your flashcards */
-    height: 460px; /* Adjusted to accommodate the flashcard plus controls */
-    margin: 40px auto 60px; /* Adjusted for spacing between decks */
+    width: 320px;
+    height: 250px; /* Modified to reduce excess space */
+    margin: 20px auto;
 }
 
 .flashcard-deck .flashcard-controls {
     position: absolute;
     width: 100%;
-    top: 420px; /* Adjusted to be below the larger flashcard */
-    z-index: 10; /* Ensures controls are above the flashcards */
+    bottom: 10px; /* Positioned at the bottom of the deck */
     text-align: center;
 }
 
 .flashcard-deck .flashcard {
-    display: none; /* Hide all cards initially */
+    display: none;
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%); /* Horizontally center the flashcard */
-    width: 300px; /* Default width for larger screens */
-    height: 200px; /* Default height for larger screens */
+    transform: translateX(-50%);
+    width: 300px;
+    height: 200px;
     perspective: 1000px;
-    z-index: 1; /* Ensure flashcards are below the controls */
+    z-index: 1;
 }
 
 .flashcard-deck .flashcard.active {
-    display: block; /* Only the active card is displayed */
+    display: block;
 }
 
 .flashcard-inner {
@@ -73,28 +72,5 @@
     padding: 5px;
     border-radius: 5px;
     font-size: 14px;
-    z-index: 2; /* Ensure it's visible above the flashcard content */
-}
-
-/* Media queries for responsive adjustments */
-@media (max-width: 768px) {
-    .flashcard-deck {
-        height: 200px;
-    }
-
-    .flashcard {
-        width: 250px;
-        height: 150px;
-    }
-}
-
-@media (max-width: 480px) {
-    .flashcard-deck {
-        height: 180px;
-    }
-
-    .flashcard {
-        width: 200px;
-        height: 120px;
-    }
+    z-index: 2;
 }
