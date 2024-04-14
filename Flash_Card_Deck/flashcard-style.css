@@ -1,21 +1,17 @@
 .flashcard-deck {
-    width: 90%; /* Adjust based on preference */
-    max-width: 320px; /* Maximum size of the flashcards */
-    margin: 20px auto;
     position: relative;
-    min-height: 300px; /* Adjust this based on the content */
+    width: 320px; /* Adjust based on the actual size of your flashcards */
+    height: 460px; /* Adjusted to accommodate the flashcard plus controls */
+    margin: 40px auto 60px; /* Adjusted for spacing between decks */
 }
-
-
 
 .flashcard-deck .flashcard-controls {
     position: absolute;
     width: 100%;
-    bottom: -40px; /* Position controls below the flashcard deck */
-    z-index: 2;
+    top: 420px; /* Adjusted to be below the larger flashcard */
+    z-index: 10; /* Ensures controls are above the flashcards */
     text-align: center;
 }
-
 
 .flashcard-deck .flashcard {
     display: none; /* Hide all cards initially */
@@ -23,10 +19,10 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%); /* Horizontally center the flashcard */
-    width: 320px; /* Width of the flashcard */
-    height: 290px; /* Height of the flashcard */
+    width: 300px; /* Default width for larger screens */
+    height: 200px; /* Default height for larger screens */
     perspective: 1000px;
-    z-index: 1; /* Flashcard z-index is lower than the controls to ensure they don't overlap */
+    z-index: 1; /* Ensure flashcards are below the controls */
 }
 
 .flashcard-deck .flashcard.active {
@@ -69,3 +65,36 @@
     transform: rotateY(180deg);
 }
 
+.flashcard-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 2; /* Ensure it's visible above the flashcard content */
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 768px) {
+    .flashcard-deck {
+        height: 200px;
+    }
+
+    .flashcard {
+        width: 250px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .flashcard-deck {
+        height: 180px;
+    }
+
+    .flashcard {
+        width: 200px;
+        height: 120px;
+    }
+}
